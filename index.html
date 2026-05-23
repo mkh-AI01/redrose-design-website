@@ -1,1 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redrose Design | Interior Design & Home Styling | McKinney, Texas</title>
+<meta name="description" content="Redrose Design — Interior design and home styling in McKinney, Texas. Modern farmhouse meets city-country style. Serving DFW and nationwide virtually.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --crimson:#B83232;--crimson-light:#D4706A;--crimson-pale:#F5E8E8;
+  --sage:#6B7C62;--sage-light:#A8B89F;--sage-pale:#E8EDE6;
+  --cream:#F7F3ED;--warm-white:#FDFAF6;
+  --gold:#C9A84C;--gold-light:#E8D5A0;
+  --charcoal:#2E2A26;--warm-gray:#7A7268;--light-gray:#EDE9E3;--linen:#F0EBE1;
+  --serif:'Playfair Display',Georgia,serif;--sans:'Raleway',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--warm-white);color:var(--charcoal);font-weight:300;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(253,250,246,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--linen);padding:0 3.5rem;height:76px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo img{height:52px;width:auto}
+.nav-logo-name{font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--crimson);letter-spacing:0.02em}
+.nav-logo-sub{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);font-weight:500}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--warm-gray);text-decoration:none;transition:color 0.3s;font-weight:500}
+.nav-links a:hover{color:var(--crimson)}
+.nav-cta{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:white;background:var(--crimson);padding:0.65rem 1.6rem;text-decoration:none;font-weight:500;transition:background 0.3s;}
+.nav-cta:hover{background:#8B2424}
+.hero{min-height:100vh;padding-top:76px;display:grid;grid-template-columns:55% 45%;background:var(--warm-white);}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 3.5rem;position:relative;}
+.hero-left::after{content:'';position:absolute;right:0;top:15%;bottom:15%;width:1px;background:var(--light-gray);}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:2rem;}
+.hero-tag-line{width:28px;height:1px;background:var(--gold)}
+.hero-tag-text{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.hero-title{font-family:var(--serif);font-size:clamp(2.8rem,4.5vw,4.5rem);font-weight:400;line-height:1.12;color:var(--charcoal);margin-bottom:0.5rem;}
+.hero-title-italic{font-family:var(--serif);font-style:italic;color:var(--crimson);display:block;font-size:clamp(3rem,5vw,5rem);}
+.hero-sub{font-size:0.88rem;color:var(--warm-gray);max-width:400px;line-height:1.95;margin:1.5rem 0 2.5rem;font-weight:300;}
+.hero-actions{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.btn-primary{background:var(--crimson);color:white;text-decoration:none;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;padding:1rem 2.2rem;font-weight:500;transition:background 0.3s;display:inline-block;}
+.btn-primary:hover{background:#8B2424}
+.btn-ghost{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);text-decoration:none;font-weight:500;display:flex;align-items:center;gap:8px;transition:color 0.3s;}
+.btn-ghost:hover{color:var(--charcoal)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--light-gray);}
+.hero-stat-num{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--crimson);line-height:1;}
+.hero-stat-label{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--warm-gray);margin-top:4px;font-weight:400;}
+.hero-right{position:relative;overflow:hidden;display:grid;grid-template-rows:60% 40%;gap:3px;background:var(--linen);}
+.hero-main-img{background:var(--cream);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.hero-bottom-imgs{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.hero-sm-img{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.hero-sm-img:first-child{background:var(--sage-pale)}
+.hero-sm-img:last-child{background:var(--crimson-pale)}
+.hero-label{position:absolute;bottom:1rem;left:1rem;background:white;padding:0.5rem 0.85rem;font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--warm-gray);font-weight:500;}
+.scene{width:100%;height:100%;position:absolute;top:0;left:0}
+.marquee-strip{background:var(--crimson);padding:0.9rem 0;overflow:hidden;white-space:nowrap;}
+.marquee-inner{display:inline-flex;animation:marquee 22s linear infinite;}
+.marquee-item{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.85);font-weight:500;padding:0 2rem;}
+.marquee-dot{color:var(--gold-light);margin:0 0.5rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.philosophy{background:var(--cream);padding:6rem 3.5rem;display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:center;}
+.phil-visual{position:relative}
+.phil-img{width:100%;aspect-ratio:4/5;background:var(--linen);position:relative;overflow:hidden;}
+.phil-accent-box{position:absolute;bottom:-1.5rem;right:-1.5rem;width:45%;aspect-ratio:1;background:var(--sage-pale);border:8px solid var(--cream);z-index:0;}
+.phil-quote-box{position:absolute;top:1.5rem;left:-2rem;background:white;padding:1.25rem 1.5rem;max-width:200px;z-index:2;border-left:3px solid var(--gold);}
+.phil-quote-text{font-family:var(--serif);font-size:0.95rem;font-style:italic;color:var(--charcoal);line-height:1.5;}
+.phil-quote-attr{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--warm-gray);margin-top:8px;font-weight:500;}
+.section-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;}
+.eyebrow-line{width:24px;height:1px;background:var(--gold)}
+.eyebrow-text{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.phil-title{font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.8rem);font-weight:400;line-height:1.2;color:var(--charcoal);margin-bottom:1.5rem;}
+.phil-title em{font-style:italic;color:var(--crimson)}
+.phil-body{font-size:0.88rem;color:var(--warm-gray);line-height:1.95;margin-bottom:1rem;font-weight:300}
+.services{padding:6rem 3.5rem;background:var(--warm-white)}
+.services-header{text-align:center;max-width:620px;margin:0 auto 4rem;}
+.services-title{font-family:var(--serif);font-size:clamp(2rem,3.2vw,3.2rem);font-weight:400;line-height:1.2;color:var(--charcoal);margin-bottom:1rem;}
+.services-title em{font-style:italic;color:var(--crimson)}
+.services-intro{font-size:0.88rem;color:var(--warm-gray);line-height:1.9;font-weight:300}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--cream);padding:2.5rem 2rem;position:relative;transition:transform 0.3s;border-bottom:3px solid transparent;}
+.service-card:hover{transform:translateY(-4px);border-bottom-color:var(--crimson)}
+.service-icon{width:48px;height:48px;background:var(--crimson-pale);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
+.service-icon svg{width:22px;height:22px;stroke:var(--crimson);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.service-num{position:absolute;top:2rem;right:2rem;font-family:var(--serif);font-size:2.5rem;font-weight:400;color:var(--light-gray);line-height:1;}
+.service-name{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--charcoal);margin-bottom:0.75rem;}
+.service-desc{font-size:0.84rem;color:var(--warm-gray);line-height:1.9;font-weight:300}
+.service-divider{width:28px;height:1px;background:var(--gold);margin:1.25rem 0}
+.process{background:var(--charcoal);padding:6rem 3.5rem}
+.process-header{text-align:center;margin-bottom:4rem;}
+.process-title{font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.8rem);font-weight:400;color:white;margin-top:1rem;}
+.process-title em{font-style:italic;color:var(--crimson-light)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative;}
+.process-steps::before{content:'';position:absolute;top:28px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:1px;background:rgba(255,255,255,0.12);}
+.process-step{padding:0 1.5rem 2rem;display:flex;flex-direction:column;align-items:flex-start;}
+.step-circle{width:56px;height:56px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;position:relative;z-index:1;background:var(--charcoal);}
+.step-circle-num{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--gold);}
+.step-name{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage-light);font-weight:500;margin-bottom:0.75rem;}
+.step-desc{font-size:0.83rem;color:rgba(255,255,255,0.45);line-height:1.85;font-weight:300}
+.about{padding:6rem 3.5rem;background:var(--linen);display:grid;grid-template-columns:1.1fr 1fr;gap:6rem;align-items:center;}
+.about-title{font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.8rem);font-weight:400;line-height:1.2;color:var(--charcoal);margin-bottom:1.5rem;}
+.about-title em{font-style:italic;color:var(--crimson)}
+.about-body{font-size:0.88rem;color:var(--warm-gray);line-height:1.95;margin-bottom:1rem;font-weight:300}
+.about-sig{font-family:var(--serif);font-size:1.8rem;font-style:italic;color:var(--charcoal);margin-top:2rem;}
+.about-sig-role{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-top:6px;}
+.about-visual{position:relative}
+.about-portrait{width:100%;aspect-ratio:3/4;background:var(--cream);position:relative;overflow:hidden;}
+.about-tags{position:absolute;bottom:2rem;left:-1.5rem;display:flex;flex-direction:column;gap:8px;}
+.about-tag{background:white;padding:0.6rem 1rem;display:flex;align-items:center;gap:8px;}
+.about-tag-dot{width:8px;height:8px;border-radius:50%;background:var(--crimson);flex-shrink:0;}
+.about-tag-text{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--charcoal);font-weight:500}
+.contact{padding:6rem 3.5rem;background:var(--warm-white);display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start;}
+.contact-title{font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.8rem);font-weight:400;line-height:1.2;color:var(--charcoal);margin-bottom:1rem;}
+.contact-title em{font-style:italic;color:var(--crimson)}
+.contact-body{font-size:0.88rem;color:var(--warm-gray);line-height:1.95;margin-bottom:2rem;font-weight:300}
+.contact-info{display:flex;flex-direction:column;gap:1.25rem}
+.contact-info-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:3px;}
+.contact-info-val{font-size:0.88rem;color:var(--charcoal)}
+.contact-form{display:flex;flex-direction:column;gap:1.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--warm-gray);font-weight:500}
+.form-input{border:none;border-bottom:1px solid var(--light-gray);padding:0.7rem 0;font-family:var(--sans);font-size:0.88rem;font-weight:300;color:var(--charcoal);background:transparent;outline:none;transition:border-color 0.3s;width:100%;}
+.form-input:focus{border-bottom-color:var(--crimson)}
+.form-input::placeholder{color:var(--light-gray)}
+select.form-input{appearance:none;cursor:pointer}
+textarea.form-input{resize:none;min-height:90px}
+.form-submit{background:var(--crimson);color:white;border:none;padding:1rem 2.5rem;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background 0.3s;align-self:flex-start;}
+.form-submit:hover{background:#8B2424}
+footer{background:var(--charcoal);padding:2.5rem 3.5rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;border-top:1px solid rgba(255,255,255,0.06);}
+.footer-logo{display:flex;align-items:center;gap:10px}
+.footer-logo img{height:36px;filter:brightness(0) invert(1);opacity:0.6}
+.footer-logo-name{font-family:var(--serif);font-size:1.1rem;color:rgba(255,255,255,0.6)}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.28);text-align:center;letter-spacing:0.08em}
+.footer-links{display:flex;gap:2rem;list-style:none;justify-content:flex-end}
+.footer-links a{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.3s}
+.footer-links a:hover{color:rgba(255,255,255,0.75)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.hero-left>*{animation:fadeUp 0.7s ease both}
+.hero-tag{animation-delay:0.1s}.hero-title{animation-delay:0.25s}.hero-sub{animation-delay:0.4s}.hero-actions{animation-delay:0.5s}.hero-stats{animation-delay:0.6s}
+</style>
+</head>
+<body>
 
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="assets/redrose-logo.png" alt="Redrose Design logo">
+    <div style="display:flex;flex-direction:column;line-height:1.1">
+      <span class="nav-logo-name">Redrose Design</span>
+      <span class="nav-logo-sub">Interior Design · McKinney TX</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Begin a Project</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <span class="hero-tag-text">Interior Design · McKinney, Texas</span>
+    </div>
+    <h1 class="hero-title">
+      Warm. Bright.<br>
+      <span class="hero-title-italic">Beautifully lived in.</span>
+    </h1>
+    <p class="hero-sub">Modern farmhouse meets city polish. We design interiors that feel light, intentional, and deeply at home — spaces your family will grow into for years to come.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Start Your Project</a>
+      <a href="#services" class="btn-ghost">Our Services →</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">12+</div><div class="hero-stat-label">Years Experience</div></div>
+      <div><div class="hero-stat-num">DFW</div><div class="hero-stat-label">Metro &amp; Beyond</div></div>
+      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Client-Focused</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-main-img">
+      <!-- REPLACE SVG with: <img src="assets/hero-living-room.jpg" alt="Living room design" style="width:100%;height:100%;object-fit:cover"> -->
+      <svg class="scene" viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <rect width="480" height="340" fill="#F7F3ED"/>
+        <rect x="0" y="270" width="480" height="70" fill="#EDE9E0"/>
+        <rect x="120" y="30" width="200" height="240" rx="100" fill="#E8EDE6" opacity="0.5"/>
+        <rect x="150" y="160" width="80" height="110" fill="#F0EBE1"/>
+        <rect x="160" y="140" width="60" height="30" rx="4" fill="#D4A8A0" opacity="0.5"/>
+        <rect x="170" y="125" width="40" height="18" rx="2" fill="#C9A84C" opacity="0.4"/>
+        <rect x="185" y="100" width="10" height="28" fill="#C9A84C" opacity="0.5"/>
+        <rect x="60" y="180" width="80" height="90" rx="4" fill="#EDE8E0"/>
+        <rect x="70" y="190" width="60" height="40" fill="#A8B89F" opacity="0.4"/>
+        <rect x="310" y="160" width="110" height="110" rx="6" fill="#EDE8E0"/>
+        <rect x="340" y="120" width="5" height="38" fill="#6B7C62" opacity="0.6"/>
+        <ellipse cx="342" cy="110" rx="18" ry="20" fill="#6B7C62" opacity="0.35"/>
+      </svg>
+      <div class="hero-label">Living Room Styling</div>
+    </div>
+    <div class="hero-bottom-imgs">
+      <div class="hero-sm-img">
+        <!-- REPLACE SVG with: <img src="assets/hero-kitchen.jpg" alt="Kitchen design" style="width:100%;height:100%;object-fit:cover"> -->
+        <svg class="scene" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="240" height="180" fill="#E8EDE6"/>
+          <rect x="40" y="40" width="100" height="90" rx="50" fill="#F7F3ED" opacity="0.6"/>
+          <rect x="60" y="90" width="60" height="40" fill="#F0EBE1"/>
+          <rect x="155" y="70" width="55" height="60" rx="4" fill="#F5EDE5" opacity="0.7"/>
+        </svg>
+        <div class="hero-label">Kitchen &amp; Dining</div>
+      </div>
+      <div class="hero-sm-img">
+        <!-- REPLACE SVG with: <img src="assets/hero-bedroom.jpg" alt="Bedroom design" style="width:100%;height:100%;object-fit:cover"> -->
+        <svg class="scene" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="240" height="180" fill="#F5E8E8"/>
+          <rect x="30" y="30" width="140" height="100" rx="4" fill="#FDFAF6" opacity="0.7"/>
+          <rect x="50" y="60" width="80" height="40" fill="#E8D0C8" opacity="0.4"/>
+          <ellipse cx="202" cy="45" rx="15" ry="18" fill="#B83232" opacity="0.25"/>
+        </svg>
+        <div class="hero-label">Primary Bedroom</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner">
+    <span class="marquee-item">Modern Farmhouse<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">City-Country Living<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Clean &amp; Light Interiors<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">DFW Metro &amp; Beyond<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Furniture Sourcing<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Full-Service Design<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Virtual Consultations<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Modern Farmhouse<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">City-Country Living<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Clean &amp; Light Interiors<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">DFW Metro &amp; Beyond<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Furniture Sourcing<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Full-Service Design<span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Virtual Consultations<span class="marquee-dot">✦</span></span>
+  </div>
+</div>
+
+<section class="philosophy" id="philosophy">
+  <div class="phil-visual">
+    <div class="phil-img">
+      <!-- REPLACE SVG with: <img src="assets/philosophy-room.jpg" alt="Styled interior" style="width:100%;height:100%;object-fit:cover"> -->
+      <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <rect width="320" height="400" fill="#F0EBE1"/>
+        <rect x="40" y="20" width="220" height="280" rx="110" fill="#F7F3ED" opacity="0.7"/>
+        <rect x="60" y="220" width="200" height="80" fill="#EDE8E0"/>
+        <rect x="80" y="200" width="80" height="100" rx="4" fill="#D4C4B0" opacity="0.5"/>
+        <rect x="100" y="148" width="40" height="25" rx="2" fill="#C9A84C" opacity="0.45"/>
+        <rect x="200" y="150" width="60" height="70" rx="3" fill="#E8EDE6" opacity="0.7"/>
+        <ellipse cx="230" cy="140" rx="25" ry="28" fill="#6B7C62" opacity="0.25"/>
+      </svg>
+    </div>
+    <div class="phil-accent-box"></div>
+    <div class="phil-quote-box">
+      <p class="phil-quote-text">"Design is the silent language of a home."</p>
+      <p class="phil-quote-attr">— Ruby Chang</p>
+    </div>
+  </div>
+  <div>
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Our Philosophy</span></div>
+    <h2 class="phil-title">Light. <em>Warm.</em> Wonderfully you.</h2>
+    <p class="phil-body">We're drawn to the beauty of modern farmhouse design — the clean lines, the natural textures, the way a well-designed space feels both fresh and lived-in at the same time. We call it city-country: the polish of contemporary design with the soul of home.</p>
+    <p class="phil-body">Every project begins with understanding how your family actually lives. Light matters. Flow matters. The way you feel when you walk through the front door matters most of all.</p>
+    <p class="phil-body">We source furniture and materials with intention — pieces that are beautiful, durable, and worth passing down.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="services-header">
+    <div class="section-eyebrow" style="justify-content:center"><div class="eyebrow-line"></div><span class="eyebrow-text">What We Offer</span><div class="eyebrow-line"></div></div>
+    <h2 class="services-title">Design services <em>tailored</em> to your life</h2>
+    <p class="services-intro">Whether you're starting from scratch or refreshing a single room, we meet you where you are.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-num">01</span>
+      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <h3 class="service-name">Full Interior Design</h3>
+      <div class="service-divider"></div>
+      <p class="service-desc">Complete design for new builds, renovations, or whole-home transformations. Space planning, material selection, furniture sourcing, and final styling — all handled for you.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">02</span>
+      <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l5 3"/></svg></div>
+      <h3 class="service-name">Room Styling &amp; Refresh</h3>
+      <div class="service-divider"></div>
+      <p class="service-desc">Focused design for a single room or living area. We optimize your layout, select a cohesive palette, source furniture and accessories, and transform the space completely.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">03</span>
+      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M2 12h6"/></svg></div>
+      <h3 class="service-name">Virtual Design Consultation</h3>
+      <div class="service-divider"></div>
+      <p class="service-desc">Professional design direction from anywhere in the country. Curated mood board, product sourcing list, and floor plan — all delivered digitally.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-header">
+    <div class="section-eyebrow" style="justify-content:center"><div class="eyebrow-line"></div><span class="eyebrow-text">How We Work</span><div class="eyebrow-line"></div></div>
+    <h2 class="process-title">From first hello to <em>final reveal</em></h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-circle"><span class="step-circle-num">01</span></div>
+      <div class="step-name">Discovery Call</div>
+      <p class="step-desc">We start with a conversation about your vision, lifestyle, and budget. This shapes every decision that follows.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle"><span class="step-circle-num">02</span></div>
+      <div class="step-name">Design Concept</div>
+      <p class="step-desc">Mood boards, floor plans, and curated material selections. We refine the concept until it feels exactly right.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle"><span class="step-circle-num">03</span></div>
+      <div class="step-name">Sourcing &amp; Order</div>
+      <p class="step-desc">We source and manage all furniture, fixtures, and finishes — coordinating vendors and tracking every delivery.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle"><span class="step-circle-num">04</span></div>
+      <div class="step-name">Install &amp; Reveal</div>
+      <p class="step-desc">We oversee installation and complete the final styling so your space is perfect from the moment you walk in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">The Designer</span></div>
+    <h2 class="about-title">Designing spaces that hold your <em>family's story</em></h2>
+    <p class="about-body">I'm Ruby Chang, the principal designer behind Redrose Design. I've spent over a decade helping families across North Texas create homes that are both beautifully designed and genuinely livable.</p>
+    <p class="about-body">My style is rooted in modern farmhouse — clean, light, and bright with warm natural textures and thoughtful details. I love the city-country balance: spaces that feel curated without feeling cold, and cozy without feeling cluttered.</p>
+    <p class="about-body">Based in McKinney, Texas. Serving the greater DFW area and available for virtual consultations nationwide.</p>
+    <div class="about-sig">Ruby Chang</div>
+    <div class="about-sig-role">Principal Designer · Redrose Design</div>
+  </div>
+  <div class="about-visual">
+    <div class="about-portrait">
+      <!-- REPLACE SVG with: <img src="assets/ruby-portrait.jpg" alt="Ruby Chang, Principal Designer" style="width:100%;height:100%;object-fit:cover"> -->
+      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="400" fill="#F7F3ED"/>
+        <ellipse cx="150" cy="108" rx="52" ry="58" fill="#E8C4B4" opacity="0.7"/>
+        <rect x="50" y="200" width="200" height="200" fill="#C9A884" opacity="0.2"/>
+        <rect x="70" y="220" width="160" height="180" fill="#A8B89F" opacity="0.25"/>
+      </svg>
+    </div>
+    <div class="about-tags">
+      <div class="about-tag"><div class="about-tag-dot"></div><span class="about-tag-text">Modern Farmhouse</span></div>
+      <div class="about-tag"><div class="about-tag-dot" style="background:#6B7C62"></div><span class="about-tag-text">City-Country Style</span></div>
+      <div class="about-tag"><div class="about-tag-dot" style="background:#C9A84C"></div><span class="about-tag-text">DFW &amp; Nationwide</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div>
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Get in Touch</span></div>
+    <h2 class="contact-title">Let's design something <em>beautiful</em> together</h2>
+    <p class="contact-body">Every great space begins with a conversation. Tell us about your project and we'll be in touch within 48 hours.</p>
+    <div class="contact-info">
+      <div><div class="contact-info-label">Email</div><div class="contact-info-val">ruby@redrosedesign.net</div></div>
+      <div><div class="contact-info-label">Studio Location</div><div class="contact-info-val">McKinney, Texas · DFW Metro</div></div>
+      <div><div class="contact-info-label">Service Area</div><div class="contact-info-val">In-person DFW · Virtual nationwide</div></div>
+    </div>
+  </div>
+  <div class="contact-form">
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane"></div>
+      <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Smith"></div>
+    </div>
+    <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="jane@email.com"></div>
+    <div class="form-group">
+      <label class="form-label">Service Interest</label>
+      <select class="form-input">
+        <option value="" disabled selected>Select a service</option>
+        <option>Full Interior Design</option>
+        <option>Room Styling &amp; Refresh</option>
+        <option>Virtual Design Consultation</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+    <div class="form-group"><label class="form-label">Tell Us About Your Project</label><textarea class="form-input" placeholder="Share a bit about your space, timeline, and what you're envisioning..."></textarea></div>
+    <button class="form-submit">Send Inquiry</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <img src="assets/redrose-logo.png" alt="Redrose Design">
+    <span class="footer-logo-name">Redrose Design</span>
+  </div>
+  <p class="footer-copy">© 2026 Redrose Design · McKinney, Texas · All rights reserved</p>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
